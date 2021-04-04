@@ -8,14 +8,14 @@ class Ui_About(object):
     def setupUi(self, About):
         About.setObjectName("About")
         About.resize(466, 156)
-        self.label = QtWidgets.QLabel(About)
-        self.label.setGeometry(QtCore.QRect(10, 10, 131, 141))
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../img/hutao.png"))
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(About)
-        self.label_2.setGeometry(QtCore.QRect(160, 10, 271, 141))
-        self.label_2.setObjectName("label_2")
+        self.logo = QtWidgets.QLabel(About)
+        self.logo.setGeometry(QtCore.QRect(10, 10, 131, 141))
+        self.logo.setText("")
+        self.logo.setPixmap(QtGui.QPixmap("../img/hutao.png"))
+        self.logo.setObjectName("logo")
+        self.aboutText = QtWidgets.QLabel(About)
+        self.aboutText.setGeometry(QtCore.QRect(160, 10, 271, 141))
+        self.aboutText.setObjectName("aboutText")
 
         self.retranslateUi(About)
         QtCore.QMetaObject.connectSlotsByName(About)
@@ -23,7 +23,7 @@ class Ui_About(object):
     def retranslateUi(self, About):
         _translate = QtCore.QCoreApplication.translate
         About.setWindowTitle(_translate("About", "Dialog"))
-        self.label_2.setText(_translate("About", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.aboutText.setText(_translate("About", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"

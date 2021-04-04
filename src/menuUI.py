@@ -10,10 +10,10 @@ class AboutUI(Ui_About, QDialog):
         self.setupUi(self)
         self.setWindowTitle('关于')
         self.setWindowIcon(QtGui.QIcon('hutao.ico'))
-        self.label.setPixmap(QtGui.QPixmap("hutao.ico"))
+        self.logo.setPixmap(QtGui.QPixmap("hutao.ico"))
         self.setFixedSize(self.width(), self.height())
         self.setWindowFlags(QtCore.Qt.WindowCloseButtonHint)
-        self.label_2.setOpenExternalLinks(True)
+        self.aboutText.setOpenExternalLinks(True)
 
 
 class UseUI(Ui_Use, QDialog):
@@ -24,3 +24,4 @@ class UseUI(Ui_Use, QDialog):
         self.setWindowIcon(QtGui.QIcon('hutao.ico'))
         self.setFixedSize(self.width(), self.height())
         self.setWindowFlags(QtCore.Qt.WindowCloseButtonHint)
+        self.useText.setOpenExternalLinks(True)
