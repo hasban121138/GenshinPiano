@@ -207,6 +207,7 @@ class MainUI(QtWidgets.QMainWindow, Ui_MainWindow):
             self.filePath = fullFileName
             filePath, fileName = os.path.split(fullFileName)
             self.notePath = filePath
+            self.setWindowTitle(self.title + '  -  ' + fileName + '*')
 
         self.save()  # 已经有了路径
 
@@ -219,6 +220,7 @@ class MainUI(QtWidgets.QMainWindow, Ui_MainWindow):
         self.filePath = fullFileName
         filePath, fileName = os.path.split(fullFileName)
         self.notePath = filePath
+        self.setWindowTitle(self.title + '  -  ' + fileName + '*')
         self.save()
 
     def _onOpen(self):
@@ -247,8 +249,10 @@ class MainUI(QtWidgets.QMainWindow, Ui_MainWindow):
                                                 re.I)
                     if (reNoteDelayFlage.group(1) == 'True'):
                         self.actionnoteDelay.setChecked(True)
+                        self.noteDelaySplitter.show()
                     elif (reNoteDelayFlage.group(1) == 'False'):
                         self.actionnoteDelay.setChecked(False)
+                        self.noteDelaySplitter.hide()
                 elif (line == '\n'):
                     pass
                 else:
