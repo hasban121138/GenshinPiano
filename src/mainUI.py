@@ -233,6 +233,11 @@ class MainUI(QtWidgets.QMainWindow, Ui_MainWindow):
         self.notePath = filePath
         self.filePath = fullFileName
         self.noteContainer.clear()
+        self.actionnoteDelay.setChecked(False)
+        self.noteDelaySplitter.hide()
+        self.gloablDelay.setText('')
+        self.noteDelay.setText('')
+
         with open(fullFileName, 'r', encoding='utf-8') as noteFile:
             line = noteFile.readline()
             while line:
