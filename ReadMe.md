@@ -80,4 +80,4 @@ build可运行exe
 
 ## License
 
-MIT
+GPL
